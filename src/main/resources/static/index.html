@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOWEZ - Electric Bike Rentals</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body class="bg-abstract-dark text-white font-poppins overflow-x-hidden">
+    <div class="abstract-bg">
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="circle-3"></div>
+        <div class="zigzag-line"></div>
+        <div class="triangle-1"></div>
+        <div class="triangle-2"></div>
+    </div>
+
+    <nav class="py-6 px-6 sticky top-0 z-50 bg-opacity-80 backdrop-blur-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="logo-icon w-12 h-12 rounded-xl flex items-center justify-center bg-gradient-to-br from-neon-pink to-electric-purple transform rotate-12 shadow-glow">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <h1 class="text-3xl font-black font-space-grotesk bg-clip-text text-transparent bg-gradient-to-r from-neon-pink to-electric-blue">
+                    GOWEZ
+                </h1>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="" class="nav-link font-bold">HOME</a>
+                <a href="#bike-showcase" class="nav-link font-bold">BIKES</a>
+                <a href="#location" class="nav-link font-bold">LOCATION</a>
+                <a href="/src/main/resources/static/auth/login.html" class="nav-link font-bold">LOGIN</a>
+            </div>
+            <button class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero-section relative overflow-hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-30 mix-blend-multiply"></div>
+        <div class="container mx-auto px-6 py-40 relative z-10">
+            <div class="max-w-2xl animate__animated animate__fadeInUp">
+                <h1 class="text-6xl md:text-8xl font-black font-montserrat mb-6 leading-tight tracking-tight">
+                    <span class="text-white animate__animated animate__pulse animate__infinite">ZIP THE CITY</span> 
+                </h1>
+                <h2 class="text-4xl md:text-5xl font-black font-montserrat mb-8 text-electric-blue typewriter">
+                    LEAVE NO TRACE.
+                </h2>
+                <p class="text-xl md:text-2xl mb-10 max-w-lg font-medium animate__animated animate__fadeInUp animate__delay-1s">Rent premium electric bikes and explore the city sustainably with GOWEZ. No app required!</p>
+                <div class="flex flex-wrap gap-6 animate__animated animate__fadeInUp animate__delay-2s">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 relative" id="bike-showcase">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-black font-montserrat mb-6">
+                    <span class="text-white">OUR E-BIKES</span> 
+                </h2>
+                <div class="w-32 h-2 bg-gradient-to-r from-neon-pink to-electric-purple mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bike-card rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-500 group">
+                    <div class="bike-image h-80 bg-abstract-dark-2 flex items-center justify-center relative">
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-40"></div>
+                        <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Electric Bike" class="h-full object-cover group-hover:scale-110 transition-all duration-700">
+                        <div class="absolute bottom-0 left-0 right-0 p-6">
+                            <span class="inline-block px-4 py-1 rounded-full bg-gradient-to-r from-neon-pink to-electric-purple text-sm font-bold">MOST POPULAR</span>
+                        </div>
+                    </div>
+                    <div class="p-8 bg-abstract-dark-2 border-t-4 border-electric-yellow">
+                        <h3 class="text-3xl font-black font-space-grotesk mb-3">FRAMESET SUPERCORSA VIENTO</h3>
+                        <p class="text-gray-300 mb-6">The Viento Supercorsa is the world's most iconic steel bicycle frame with electric assist.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <span class="text-electric-yellow mr-3 text-xl">⦿</span> Free cable lock included
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-electric-yellow mr-3 text-xl">⦿</span> 50km range
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-electric-yellow mr-3 text-xl">⦿</span> Smartphone mount
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-3xl font-black">$12<span class="text-base font-medium">/day</span></span>
+                            <button class="rent-button px-6 py-3 rounded-lg font-bold">
+                                RENT NOW
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bike-card rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-500 group">
+                    <div class="bike-image h-80 bg-abstract-dark-2 flex items-center justify-center relative">
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-40"></div>
+                        <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Electric Bike" class="h-full object-cover group-hover:scale-110 transition-all duration-700">
+                    </div>
+                    <div class="p-8 bg-abstract-dark-2 border-t-4 border-electric-blue">
+                        <h3 class="text-3xl font-black font-space-grotesk mb-3">URBAN ZEPHYR PRO</h3>
+                        <p class="text-gray-300 mb-6">Lightweight aluminum frame with powerful electric motor for city commuting.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <span class="text-electric-blue mr-3 text-xl">⦿</span> Integrated GPS tracking
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-electric-blue mr-3 text-xl">⦿</span> 60km range
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-electric-blue mr-3 text-xl">⦿</span> USB charging port
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-3xl font-black">$15<span class="text-base font-medium">/day</span></span>
+                            <button class="rent-button px-6 py-3 rounded-lg font-bold">
+                                RENT NOW
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bike-card rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-all duration-500 group">
+                    <div class="bike-image h-80 bg-abstract-dark-2 flex items-center justify-center relative">
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-40"></div>
+                        <img src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Electric Bike" class="h-full object-cover group-hover:scale-110 transition-all duration-700">
+                    </div>
+                    <div class="p-8 bg-abstract-dark-2 border-t-4 border-neon-pink">
+                        <h3 class="text-3xl font-black font-space-grotesk mb-3">ECO CRUISER DELUXE</h3>
+                        <p class="text-gray-300 mb-6">Comfortable ride with premium suspension and extended battery life.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <span class="text-neon-pink mr-3 text-xl">⦿</span> Adjustable suspension
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-neon-pink mr-3 text-xl">⦿</span> 80km range
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-neon-pink mr-3 text-xl">⦿</span> Waterproof storage
+                            </li>
+                        </ul>
+                        <div class="flex justify-between items-center">
+                            <span class="text-3xl font-black">$18<span class="text-base font-medium">/day</span></span>
+                            <button class="rent-button px-6 py-3 rounded-lg font-bold">
+                                RENT NOW
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 relative" id="location">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-black font-montserrat mb-6">
+                    <span class="text-white">FIND A BIKE</span> 
+                </h2>
+                <p class="text-xl md:text-2xl max-w-2xl mx-auto">Our bikes are available at multiple locations across the city. Find the nearest one to you!</p>
+                <div class="w-32 h-2 bg-gradient-to-r from-electric-blue to-electric-yellow mx-auto rounded-full mt-6"></div>
+            </div>
+            
+            <div class="map-container rounded-3xl overflow-hidden shadow-2xl border-4 border-electric-blue">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.270715262709!2d109.24638807444298!3d-7.435267673253056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655e9d1768e4d1%3A0x959269c10818fa0c!2sSMK%20Telkom%20Purwokerto!5e0!3m2!1sen!2sid!4v1748569003962!5m2!1sen!2sid" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-16">
+                <div class="feature-card bg-abstract-dark-2 p-8 rounded-2xl shadow-lg border-b-4 border-neon-pink hover:border-electric-yellow transition-all duration-500">
+                    <div class="text-6xl mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-neon-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-black font-space-grotesk mb-4">WEB-BASED ACCESS</h3>
+                    <p class="text-gray-300">No app required! Rent and unlock bikes directly through our mobile-friendly website.</p>
+                </div>
+                
+                <div class="feature-card bg-abstract-dark-2 p-8 rounded-2xl shadow-lg border-b-4 border-electric-yellow hover:border-electric-blue transition-all duration-500">
+                    <div class="text-6xl mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-electric-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-black font-space-grotesk mb-4">PAY AS YOU GO</h3>
+                    <p class="text-gray-300">Only pay for the time you use with our minute-by-minute billing. No subscriptions!</p>
+                </div>
+                
+                <div class="feature-card bg-abstract-dark-2 p-8 rounded-2xl shadow-lg border-b-4 border-electric-blue hover:border-neon-pink transition-all duration-500">
+                    <div class="text-6xl mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-electric-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-black font-space-grotesk mb-4">ALWAYS AVAILABLE</h3>
+                    <p class="text-gray-300">Our bikes are available 24/7 with automated rental and return systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-28 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-electric-purple to-electric-blue opacity-90"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h2 class="text-5xl md:text-7xl font-black font-montserrat mb-8">
+                <span class="text-white">READY TO RIDE?</span> 
+            </h2>
+            <p class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto font-medium">Join thousands of happy riders exploring the city sustainably with GOWEZ.</p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <button class="cta-button-outline border-2 border-white px-12 py-4 rounded-full font-bold text-xl hover:bg-white hover:text-abstract-dark transition-all duration-500">
+                    RENT NOW
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 bg-abstract-dark-2">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="logo-icon w-10 h-10 rounded-lg flex items-center justify-center bg-gradient-to-br from-neon-pink to-electric-purple transform rotate-12">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-black font-space-grotesk bg-clip-text text-transparent bg-gradient-to-r from-neon-pink to-electric-blue">
+                            GOWEZ
+                        </h3>
+                    </div>
+                    <p class="text-gray-400 mb-6">Go With Electric Zone. Sustainable urban mobility for everyone.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-black font-space-grotesk mb-6">QUICK LINKS</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="footer-link">HOW IT WORKS</a></li>
+                        <li><a href="#" class="footer-link">PRICING</a></li>
+                        <li><a href="#" class="footer-link">LOCATIONS</a></li>
+                        <li><a href="#" class="footer-link">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-black font-space-grotesk mb-6">COMPANY</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="footer-link">ABOUT US</a></li>
+                        <li><a href="#" class="footer-link">CAREERS</a></li>
+                        <li><a href="#" class="footer-link">BLOG</a></li>
+                        <li><a href="#" class="footer-link">CONTACT</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-black font-space-grotesk mb-6">NEWSLETTER</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to get updates on new locations and offers.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your Email" class="px-4 py-3 bg-abstract-dark border border-gray-700 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-electric-blue w-full">
+                        <button class="px-4 bg-gradient-to-r from-electric-blue to-electric-purple text-white font-bold rounded-r-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="text-gray-500 text-sm mt-4">We respect your privacy. Unsubscribe at any time.</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-16 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 GOWEZ - Go With Electric Zone. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
