@@ -244,34 +244,34 @@ mvn test
 ## 📈 Tampilan
 
 ### Landing Page
-![Image](https://github.com/user-attachments/assets/a6c7bbd8-64e5-414f-a2d8-478a7aac66ed)
+![Image](https://github.com/user-attachments/assets/bb702ad3-c60e-4ede-b2f4-9f3a32a6f0be)
 
 ### Login 
-![Image](https://github.com/user-attachments/assets/fb762d03-b766-4654-9f43-a04c15a27b6a)
+![Image](https://github.com/user-attachments/assets/2b03edc5-5c20-4ab5-8995-e339292ffe8b)
 
 ### Register
-![Image](https://github.com/user-attachments/assets/b9378881-c8bb-4f52-9509-9147863a11c3)
+![Image](https://github.com/user-attachments/assets/e1d1ae99-7df6-47db-a43c-7988535ee647)
 
 ### Dashboard
-![Image](https://github.com/user-attachments/assets/94e15f40-3e96-4910-ac36-43950d3da977)
+![Image](https://github.com/user-attachments/assets/503dbc55-6eb8-4bc6-9559-53a163c7b0f0)
 
 ### List Sepeda
-![Image](https://github.com/user-attachments/assets/58dba7cd-c088-4ae7-ac55-e3fdd6e23187)
+![Image](https://github.com/user-attachments/assets/f0b256b5-0136-4266-812d-391a9a44af46)
 
 ### Create Data
-![Image](https://github.com/user-attachments/assets/9e0327df-e189-4287-b23c-005611740c85)
+![Image](https://github.com/user-attachments/assets/c995ffdd-8f88-4534-a855-b25c8aa0c57f)
 
 ### Read Data
-![Image](https://github.com/user-attachments/assets/f7e3e3ad-5fbb-4fb7-afff-36dc0ff93075)
+![Image](https://github.com/user-attachments/assets/b8dc2476-a57d-4765-ad82-28e7c183806e)
 
 ### Update Data
-![Image](https://github.com/user-attachments/assets/3a083849-1087-412e-bef2-65dbbd6df746)
+![Image](https://github.com/user-attachments/assets/cbb29595-7728-46d9-9765-ea9d1d54fe44)
 
 ### Delete Data
-![Image](https://github.com/user-attachments/assets/413b01f1-5a59-4bed-9e1f-c2bfa570002f)
+![Image](https://github.com/user-attachments/assets/99b920e5-d692-49b0-8575-59fc1c7ad1e9)
 
 ### Struk Pembayaran
-![Image](https://github.com/user-attachments/assets/2a822978-020e-4041-9b79-0491b06e6c77)
+![Image](https://github.com/user-attachments/assets/8689f442-f701-432e-8f07-c8d5650d439a)
 
 ## 🤝 Kontribusi
 
@@ -280,10 +280,6 @@ mvn test
 3. Commit perubahan (`git commit -m 'Add some AmazingFeature'`)
 4. Push ke branch (`git push origin feature/AmazingFeature`)
 5. Buat Pull Request
-
-## 📜 Lisensi
-
-Proyek ini dilisensikan di bawah [MIT License](LICENSE).
 
 ## 👥 Tim Pengembang
 
