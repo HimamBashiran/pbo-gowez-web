@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOWEZ Dashboard - Electric Bike Rental</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body class="bg-abstract-dark text-white font-poppins overflow-x-hidden">
+    <div class="abstract-bg">
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="circle-3"></div>
+        <div class="zigzag-line"></div>
+        <div class="triangle-1"></div>
+        <div class="triangle-2"></div>
+    </div>
+
+    <nav class="py-6 px-6 sticky top-0 z-50 bg-abstract-dark-2 bg-opacity-90 backdrop-blur-md border-b border-gray-800">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="logo-icon w-12 h-12 rounded-xl flex items-center justify-center bg-gradient-to-br from-neon-pink to-electric-purple transform rotate-12 shadow-glow">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <h1 class="text-3xl text-white font-space-grotesk bg-clip-text text-transparent bg-gradient-to-r from-neon-pink to-electric-blue">
+                    GOWEZ
+                </h1>
+            </div>
+            <div class="flex items-center space-x-6">
+                <span class="text-gray-300">Welcome, <span class="text-electric-blue font-semibold">User</span></span>
+                <button onclick="logout()" class="nav-link font-bold hover:text-neon-pink">LOGOUT</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="relative z-10 min-h-screen py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-black font-montserrat mb-4">
+                    <span class="text-white">DASHBOARD</span>
+                </h2>
+                <p class="text-xl text-gray-300">Rent your electric bike and explore the city!</p>
+                <div class="w-32 h-1 bg-gradient-to-r from-electric-blue to-electric-yellow mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <div class="mb-12">
+                <h3 class="text-3xl font-bold mb-6 text-electric-blue">Current Rentals</h3>
+                <div id="currentRentals" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                </div>
+            </div>
+
+            <div class="mb-12">
+                <h3 class="text-3xl font-bold mb-6 text-electric-blue">Available Bikes</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bike-card bg-abstract-dark-2 p-6 rounded-2xl shadow-lg border-b-4 border-neon-pink hover:border-electric-yellow transition-all duration-500 transform hover:scale-105">
+                        <div class="text-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                                 alt="Electric Bike 1" class="w-full h-48 object-cover rounded-lg mb-4">
+                            <h4 class="text-xl font-bold text-white">LIGHTNING BOLT</h4>
+                            <p class="text-gray-400">High-speed electric bike</p>
+                            <div class="text-2xl font-black text-electric-yellow mt-2">Rp 15,000/hour</div>
+                        </div>
+                        <button onclick="selectBike(1)" class="w-full py-3 bg-gradient-to-r from-neon-pink to-electric-purple text-white font-bold rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-2 border-gray-600">
+                            RENT NOW
+                        </button>
+                    </div>
+
+                    <div class="bike-card bg-abstract-dark-2 p-6 rounded-2xl shadow-lg border-b-4 border-electric-blue hover:border-electric-yellow transition-all duration-500 transform hover:scale-105">
+                        <div class="text-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                                 alt="Electric Bike 2" class="w-full h-48 object-cover rounded-lg mb-4">
+                            <h4 class="text-xl font-bold text-white">THUNDER STRIKE</h4>
+                            <p class="text-gray-400">All-terrain electric bike</p>
+                            <div class="text-2xl font-black text-electric-yellow mt-2">Rp 18,000/hour</div>
+                        </div>
+                        <button onclick="selectBike(2)" class="w-full py-3 bg-gradient-to-r from-electric-blue to-electric-purple text-white font-bold rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-2 border-gray-600">
+                            RENT NOW
+                        </button>
+                    </div>
+
+                    <div class="bike-card bg-abstract-dark-2 p-6 rounded-2xl shadow-lg border-b-4 border-electric-purple hover:border-electric-yellow transition-all duration-500 transform hover:scale-105">
+                        <div class="text-center mb-4">
+                            <img src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" 
+                                 alt="Electric Bike 3" class="w-full h-48 object-cover rounded-lg mb-4">
+                            <h4 class="text-xl font-bold text-white">VOLT RIDER</h4>
+                            <p class="text-gray-400">City cruiser electric bike</p>
+                            <div class="text-2xl font-black text-electric-yellow mt-2">Rp 12,000/hour</div>
+                        </div>
+                        <button onclick="selectBike(3)" class="w-full py-3 bg-gradient-to-r from-electric-purple to-neon-pink text-white font-bold rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-2 border-gray-600">
+                            RENT NOW
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="rentalModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-abstract-dark-2 rounded-2xl p-8 max-w-2xl w-full max-h-screen overflow-y-auto border-t-4 border-electric-blue">
+            <div class="text-center mb-6">
+                <h3 class="text-3xl font-bold text-white mb-2">RENT BIKE</h3>
+                <div class="w-24 h-1 bg-gradient-to-r from-electric-blue to-electric-yellow mx-auto rounded-full"></div>
+            </div>
+
+            <form id="rentalForm" class="space-y-6">
+                <div id="selectedBikeDisplay" class="text-center p-4 bg-abstract-dark rounded-lg border border-gray-700"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="startDate" class="block text-sm font-bold uppercase tracking-wider mb-2 text-gray-300">Start Date & Time</label>
+                        <input id="startDate" name="startDate" type="datetime-local" required 
+                            class="w-full bg-abstract-dark border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-electric-blue focus:border-transparent">
+                    </div>
+                    <div>
+                        <label for="endDate" class="block text-sm font-bold uppercase tracking-wider mb-2 text-gray-300">Return Date & Time</label>
+                        <input id="endDate" name="endDate" type="datetime-local" required 
+                            class="w-full bg-abstract-dark border border-gray-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-electric-blue focus:border-transparent">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold uppercase tracking-wider mb-4 text-gray-300">Payment Method</label>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="gopay" required class="hidden">
+                            <div class="payment-card bg-abstract-dark border border-gray-700 rounded-lg p-4 text-center cursor-pointer hover:border-electric-blue transition-all duration-300">
+                                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="GoPay" class="w-12 h-12 mx-auto mb-2 rounded">
+                                <span class="text-white font-semibold">GoPay</span>
+                            </div>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="ovo" required class="hidden">
+                            <div class="payment-card bg-abstract-dark border border-gray-700 rounded-lg p-4 text-center cursor-pointer hover:border-electric-blue transition-all duration-300">
+                                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="OVO" class="w-12 h-12 mx-auto mb-2 rounded">
+                                <span class="text-white font-semibold">OVO</span>
+                            </div>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="dana" required class="hidden">
+                            <div class="payment-card bg-abstract-dark border border-gray-700 rounded-lg p-4 text-center cursor-pointer hover:border-electric-blue transition-all duration-300">
+                                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="DANA" class="w-12 h-12 mx-auto mb-2 rounded">
+                                <span class="text-white font-semibold">DANA</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div id="costCalculation" class="bg-abstract-dark p-4 rounded-lg border border-gray-700">
+                    <h4 class="text-lg font-bold text-white mb-2">Cost Breakdown</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <div class="flex justify-between">
+                            <span>Duration:</span>
+                            <span id="duration">-</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Rate per hour:</span>
+                            <span id="hourlyRate">-</span>
+                        </div>
+                        <div class="flex justify-between font-bold text-electric-yellow text-lg border-t border-gray-600 pt-2">
+                            <span>Total Cost:</span>
+                            <span id="totalCost">Rp 0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex space-x-4">
+                    <button type="button" onclick="closeRentalModal()" class="flex-1 py-3 border-2 border-gray-600 text-gray-300 font-bold rounded-lg hover:bg-gray-600 transition-all duration-300">
+                        CANCEL
+                    </button>
+                    <button type="submit" class="flex-1 py-3 bg-gradient-to-r from-neon-pink to-electric-purple text-white font-bold rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 border-2 border-transparent">
+                        CONFIRM RENTAL
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="receiptModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white text-black rounded-2xl p-8 max-w-md w-full">
+            <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">RENTAL RECEIPT</h3>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div id="receiptContent" class="space-y-4"></div>
+
+            <div class="text-center mt-6">
+                <button onclick="closeReceiptModal()" class="px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-all duration-300">
+                    CLOSE
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

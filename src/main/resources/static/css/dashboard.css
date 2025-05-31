@@ -1,0 +1,340 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --abstract-dark: #0f0e17;
+    --abstract-dark-2: #1a1a2e;
+    --neon-pink: #ff2a6d;
+    --electric-blue: #05d9e8;
+    --electric-yellow: #d1f7ff;
+    --electric-purple: #a600ff;
+}
+
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.font-space-grotesk {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.bg-abstract-dark {
+    background-color: var(--abstract-dark);
+}
+
+.bg-abstract-dark-2 {
+    background-color: var(--abstract-dark-2);
+}
+
+.text-neon-pink {
+    color: var(--neon-pink);
+}
+
+.text-electric-blue {
+    color: var(--electric-blue);
+}
+
+.text-electric-yellow {
+    color: var(--electric-yellow);
+}
+
+.text-electric-purple {
+    color: var(--electric-purple);
+}
+
+.hero-gradient-text {
+    background: linear-gradient(135deg, var(--neon-pink) 0%, var(--electric-blue) 50%, var(--electric-purple) 100%);
+}
+
+.shadow-glow {
+    box-shadow: 0 0 15px rgba(255, 42, 109, 0.7);
+}
+
+.abstract-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.circle-1 {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 42, 109, 0.15) 0%, rgba(255, 42, 109, 0) 70%);
+    top: -200px;
+    right: -200px;
+    animation: float 15s infinite ease-in-out;
+}
+
+.circle-2 {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(5, 217, 232, 0.15) 0%, rgba(5, 217, 232, 0) 70%);
+    bottom: -100px;
+    left: -100px;
+    animation: float 12s infinite ease-in-out reverse;
+}
+
+.circle-3 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(166, 0, 255, 0.15) 0%, rgba(166, 0, 255, 0) 70%);
+    top: 50%;
+    left: 20%;
+    animation: float 18s infinite ease-in-out;
+}
+
+.zigzag-line {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(45deg, transparent 45%, var(--electric-blue) 45%, var(--electric-blue) 55%, transparent 55%);
+    bottom: 10%;
+    right: 15%;
+    opacity: 0.1;
+    transform: rotate(15deg);
+}
+
+.triangle-1 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 300px solid rgba(255, 42, 109, 0.05);
+    top: 30%;
+    right: 5%;
+    transform: rotate(45deg);
+}
+
+.triangle-2 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-top: 200px solid rgba(5, 217, 232, 0.05);
+    bottom: 20%;
+    left: 10%;
+    transform: rotate(-30deg);
+}
+
+.bike-card {
+    transition: all 0.5s ease;
+    backdrop-filter: blur(10px);
+}
+
+.bike-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.payment-option input[type="radio"]:checked + .payment-card {
+    border-color: var(--electric-blue);
+    background: linear-gradient(135deg, rgba(5, 217, 232, 0.1) 0%, rgba(166, 0, 255, 0.1) 100%);
+    transform: scale(1.05);
+}
+
+.nav-link {
+    @apply text-white hover:text-electric-blue transition-all duration-300 uppercase tracking-wider relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--neon-pink), var(--electric-blue));
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.rental-card {
+    background: linear-gradient(135deg, var(--abstract-dark-2) 0%, rgba(26, 26, 46, 0.8) 100%);
+    border: 1px solid rgba(5, 217, 232, 0.3);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.rental-card:hover {
+    border-color: var(--electric-blue);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(5, 217, 232, 0.2);
+}
+
+.status-active {
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status-completed {
+    background: linear-gradient(135deg, #6B7280 0%, #4B5563 100%);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--abstract-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--electric-blue);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--electric-purple);
+}
+
+@media (max-width: 768px) {
+    .abstract-bg {
+        display: none;
+    }
+    
+    .bike-card {
+        padding: 1rem;
+    }
+    
+    .circle-1, .circle-2, .circle-3 {
+        display: none;
+    }
+    
+    .grid-cols-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .md\:grid-cols-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.modal-enter {
+    animation: modalEnter 0.3s ease-out;
+}
+
+.modal-exit {
+    animation: modalExit 0.3s ease-in;
+}
+
+@keyframes modalEnter {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes modalExit {
+    from {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.9) translateY(-20px);
+    }
+}
+
+.bg-gradient-to-r {
+    background-image: linear-gradient(to right, var(--start), var(--end));
+}
+
+.from-neon-pink {
+    --start: var(--neon-pink);
+}
+
+.to-electric-purple {
+    --end: var(--electric-purple);
+}
+
+.from-electric-blue {
+    --start: var(--electric-blue);
+}
+
+.to-electric-yellow {
+    --end: var(--electric-yellow);
+}
+
+.from-electric-purple {
+    --start: var(--electric-purple);
+}
+
+.to-neon-pink {
+    --end: var(--neon-pink);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.transform {
+    transition: transform 0.3s ease;
+}
+
+.hover\:scale-105:hover {
+    transform: scale(1.05);
+}
+
+.hover\:shadow-lg:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
